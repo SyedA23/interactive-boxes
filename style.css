@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    color: #ff6b82;
+}
+
+
+.box {
+    width: 350px;
+    margin: 20px auto;
+    border: 1px solid #C8C8C8;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.box.active {
+    background: #FFD1DC;
+}
+.box.active .content {
+    display: block;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background:  #FFF9FA; */
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 0 120px 0 40px;
+}
+
+.header input[type="radio"] {
+    margin-right: 10px;
+    background-color: #4caf50; 
+}
+
+span {
+    font-weight: bold;
+}
+
+.discount {
+    background-color: #ff5672;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+.pricing {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.8em;
+}
+
+.final-price {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    text-align: center; 
+    width: 100%; 
+
+}
+
+.delivery {
+    margin: 20px 0 20px 0; 
+    color: #ff6b82;
+}
+
+.total{
+    margin:  20px 0 20px 0;
+}
+
+.popular {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background-color: #ff6b82;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.option-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0 0 45px;
+}
+
+.option-row label {
+    font-weight: bold;
+}
+
+.option-row select {
+    margin: 0 5px;
+    padding: 5px;
+}
+
+
+
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    background: #ff6b82;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* Responsive Layout */
+
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .discount, .popular {
+        margin-top: 10px;
+    }
+
+    .pricing {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .option-row {
+        flex-direction: column;
+    }
+
+    .add-to-cart {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
